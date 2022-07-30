@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:petology/view/pages/help_them_page.dart';
 
 import '../../../utilities/colors.dart';
 
@@ -45,7 +47,10 @@ class AboutUsHead extends StatelessWidget {
                   height: 20.0,
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(CupertinoPageRoute(
+                        builder: (context) => const HelpThemPage()));
+                  },
                   child: Container(
                     height: 40.0,
                     width: 500.0,

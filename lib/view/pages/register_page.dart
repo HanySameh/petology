@@ -75,7 +75,6 @@ class RegisterPage extends StatelessWidget {
                       hint: 'password',
                     ),
                     InputField(
-                      controller: emailController,
                       hint: 'Country',
                       widget: IconButton(
                         onPressed: () {},

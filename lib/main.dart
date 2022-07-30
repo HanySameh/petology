@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:petology/utilities/colors.dart';
 
 import 'package:petology/view/pages/home_page.dart';
 

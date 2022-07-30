@@ -3,10 +3,16 @@ import 'package:flutter_svg/svg.dart';
 import 'package:petology/view/widgets/custom_button.dart';
 import '../../utilities/colors.dart';
 
-class CustomAppBar extends StatelessWidget {
+class CustomAppBar extends StatefulWidget {
   const CustomAppBar({Key? key, required this.controller}) : super(key: key);
   final PageController controller;
 
+  @override
+  State<CustomAppBar> createState() => _CustomAppBarState();
+}
+
+class _CustomAppBarState extends State<CustomAppBar> {
+  //bool _isHover = false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,7 +36,7 @@ class CustomAppBar extends StatelessWidget {
               CustomButton(
                 lable: 'About us',
                 onTap: () {
-                  controller.jumpToPage(0);
+                  widget.controller.jumpToPage(0);
                 },
                 isOutlined: false,
               ),
@@ -55,7 +61,7 @@ class CustomAppBar extends StatelessWidget {
               CustomButton(
                 lable: 'Sign Up',
                 onTap: () {
-                  controller.jumpToPage(2);
+                  widget.controller.jumpToPage(2);
                 },
                 isOutlined: false,
                 backgroundColor: AppColors.lightGrey,
@@ -67,7 +73,7 @@ class CustomAppBar extends StatelessWidget {
               CustomButton(
                 lable: 'LogIn',
                 onTap: () {
-                  controller.jumpToPage(1);
+                  widget.controller.jumpToPage(1);
                 },
                 isOutlined: true,
               ),

@@ -24,7 +24,7 @@ class AboutUsPage extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.all(20.0),
-            margin: const EdgeInsets.only(bottom: 20.0),
+            margin: const EdgeInsets.only(bottom: 15.0),
             width: double.infinity,
             color: AppColors.lightGrey.withOpacity(0.5),
             child: Column(
@@ -57,69 +57,90 @@ class AboutUsPage extends StatelessWidget {
                     PetBox(isCat: false),
                   ],
                 ),
-                const SizedBox(
-                  height: 50.0,
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 50.0,
+          ),
+          SizedBox(
+            width: 250.0,
+            child: Text(
+              'Our friends who looking for a house',
+              style: Theme.of(context).textTheme.headline5!.copyWith(
+                    color: AppColors.black,
+                  ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          Row(
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.arrow_circle_left,
+                  color: AppColors.brown,
+                  size: 40.0,
                 ),
-                SizedBox(
-                  width: 250.0,
-                  child: Text(
-                    'Our friends who looking for a house',
-                    style: Theme.of(context).textTheme.headline5!.copyWith(
-                          color: AppColors.black,
-                        ),
-                    textAlign: TextAlign.center,
+              ),
+              const SizedBox(
+                width: 20.0,
+              ),
+              Expanded(
+                child: SizedBox(
+                  height: 400.0,
+                  child: ListView.separated(
+                    itemCount: 5,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) => const PetsNeedsHomeList(),
+                    separatorBuilder: (BuildContext context, int index) =>
+                        const SizedBox(
+                      width: 20.0,
+                    ),
                   ),
                 ),
-                const SizedBox(
-                  height: 20.0,
+              ),
+              const SizedBox(
+                width: 10.0,
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.arrow_circle_right,
+                  color: AppColors.brown,
+                  size: 40.0,
                 ),
-                Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.arrow_circle_left,
-                        color: AppColors.brown,
-                        size: 40.0,
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 30.0,
+          ),
+          SubmitButton(
+            title: 'Explore',
+            onTap: () {},
+          ),
+          const SizedBox(
+            height: 30.0,
+          ),
+          Container(
+            padding: const EdgeInsets.all(20.0),
+            width: double.infinity,
+            color: AppColors.lightGrey.withOpacity(0.5),
+            child: Column(
+              children: [
+                Text(
+                  'How to take care of your friends?',
+                  style: Theme.of(context).textTheme.headline5!.copyWith(
+                        color: AppColors.black,
                       ),
-                    ),
-                    const SizedBox(
-                      width: 15.0,
-                    ),
-                    Expanded(
-                      child: SizedBox(
-                        height: 400.0,
-                        child: ListView.separated(
-                          itemCount: 5,
-                          scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) =>
-                              const PetsNeedsHomeList(),
-                          separatorBuilder: (BuildContext context, int index) =>
-                              const SizedBox(
-                            width: 20.0,
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10.0,
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.arrow_circle_right,
-                        color: AppColors.brown,
-                        size: 40.0,
-                      ),
-                    ),
-                  ],
+                  textAlign: TextAlign.center,
                 ),
                 const SizedBox(
                   height: 30.0,
-                ),
-                SubmitButton(
-                  title: 'Explore',
-                  onTap: () {},
                 ),
               ],
             ),
