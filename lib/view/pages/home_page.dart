@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:petology/view/pages/about_us_page.dart';
 import 'package:petology/view/pages/login_page.dart';
 import 'package:petology/view/pages/register_page.dart';
+import 'package:petology/view/pages/request_page.dart';
 
 import '../widgets/custom_app_bar.dart';
 
@@ -22,6 +23,7 @@ class HomePage extends StatelessWidget {
               controller: pageController,
               children: const [
                 AboutUsPage(),
+                RequestPage(),
                 LogInPage(),
                 RegisterPage(),
               ],

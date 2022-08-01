@@ -61,20 +61,25 @@ class RegisterPage extends StatelessWidget {
                     InputField(
                       controller: fristNameController,
                       hint: 'frist name',
+                      textInputType: TextInputType.name,
                     ),
                     InputField(
                       controller: lastNameController,
+                      textInputType: TextInputType.name,
                       hint: 'last name',
                     ),
                     InputField(
                       controller: emailController,
+                      textInputType: TextInputType.emailAddress,
                       hint: 'Email',
                     ),
                     InputField(
                       controller: passwordController,
+                      textInputType: TextInputType.visiblePassword,
                       hint: 'password',
                     ),
                     InputField(
+                      textInputType: TextInputType.none,
                       hint: 'Country',
                       widget: IconButton(
                         onPressed: () {},

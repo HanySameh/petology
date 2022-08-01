@@ -52,7 +52,9 @@ class _CustomAppBarState extends State<CustomAppBar> {
               ),
               CustomButton(
                 lable: 'Request',
-                onTap: () {},
+                onTap: () {
+                  widget.controller.jumpToPage(1);
+                },
                 isOutlined: false,
               ),
               const SizedBox(
@@ -61,7 +63,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
               CustomButton(
                 lable: 'Sign Up',
                 onTap: () {
-                  widget.controller.jumpToPage(2);
+                  widget.controller.jumpToPage(3);
                 },
                 isOutlined: false,
                 backgroundColor: AppColors.lightGrey,
@@ -73,7 +75,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
               CustomButton(
                 lable: 'LogIn',
                 onTap: () {
-                  widget.controller.jumpToPage(1);
+                  widget.controller.jumpToPage(2);
                 },
                 isOutlined: true,
               ),

@@ -13,6 +13,7 @@ class HelpThemPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController phoneController = TextEditingController();
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size(double.infinity, 60),
@@ -144,6 +145,7 @@ class HelpThemPage extends StatelessWidget {
                       ),
                       InputField(
                         hint: 'Country',
+                        textInputType: TextInputType.none,
                         widget: IconButton(
                           onPressed: () {},
                           icon: const Icon(
@@ -168,14 +170,17 @@ class HelpThemPage extends StatelessWidget {
                           ),
                           InputField(
                             hint: 'Location',
+                            textInputType: TextInputType.none,
                             widget: IconButton(
                               onPressed: () {},
                               icon: const Icon(Icons.location_on),
                               padding: EdgeInsets.zero,
                             ),
                           ),
-                          const InputField(
+                          InputField(
+                            controller: phoneController,
                             hint: 'phone number',
+                            textInputType: TextInputType.phone,
                           ),
                           const SizedBox(
                             height: 20.0,

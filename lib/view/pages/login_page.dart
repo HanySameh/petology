@@ -39,10 +39,12 @@ class LogInPage extends StatelessWidget {
                       ),
                       InputField(
                         controller: emailController,
+                        textInputType: TextInputType.emailAddress,
                         hint: 'Email',
                       ),
                       InputField(
                         controller: passwordController,
+                        textInputType: TextInputType.visiblePassword,
                         hint: 'password',
                       ),
                       const SizedBox(

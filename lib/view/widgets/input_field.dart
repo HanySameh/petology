@@ -3,14 +3,23 @@ import 'package:flutter/material.dart';
 import '../../utilities/colors.dart';
 
 class InputField extends StatelessWidget {
-  const InputField({Key? key, this.controller, required this.hint, this.widget})
-      : super(key: key);
+  const InputField({
+    Key? key,
+    this.controller,
+    required this.hint,
+    this.widget,
+    required this.textInputType,
+    this.height = 50.0,
+  }) : super(key: key);
   final TextEditingController? controller;
   final String hint;
   final Widget? widget;
+  final TextInputType textInputType;
+  final double height;
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: height,
       padding: const EdgeInsets.only(
         left: 14.0,
       ),
@@ -32,6 +41,7 @@ class InputField extends StatelessWidget {
           Expanded(
             child: TextFormField(
               controller: controller,
+              keyboardType: textInputType,
               autofocus: false,
               readOnly: widget != null ? true : false,
               cursorColor: AppColors.black,
